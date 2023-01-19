@@ -1,5 +1,12 @@
 //----Array----
 
+const secciones =["Fiambres", "Lacteos","Vinos","Carnes","Limpieza"]
+
+for (let index = 0; index < secciones.length; index++) {
+    const element = secciones[index];
+    console.log(element)
+}
+
 const productos = [
     {nombre: "fideos" ,precio:500},
     {nombre: "gaseosa", precio: 600},
@@ -21,7 +28,7 @@ while (bienvenida != "1" && bienvenida != "2") {
 if (bienvenida== "1"){
     alert("Bienvenido. A continuacion se mostraran todos nuestros productos")
     let productosAmostar= productos.map((productos) => productos.nombre +" "+ "$ " + productos.precio);
-    alert(productosAmostar.join("-"))
+    alert(productosAmostar.join(" |-| "))
 } else if (bienvenida== "2"){
     alert("Gracias por visitarnos")
 }
@@ -59,7 +66,7 @@ while(bienvenida!="2") {
 
     bienvenida= prompt("Desea agregar mas productos al carrito? \n1 Ingrese 1 para seguir comprando \n2 Ingrese 2 para pasar a pagar")
     while (bienvenida=="2") {
-        alert("Gracias por comprar con nosotros")
+        alert("Gracias por comprar con nosotros. Sus Total a pagar se mostrara por consola")
         carrito.forEach((saldoApagar)=> {
             console.log(`productos: ${saldoApagar.productos}, unidades:${saldoApagar.unidades},total a pagar ${saldoApagar.unidades*saldoApagar.precio}`)
         })
@@ -67,24 +74,16 @@ while(bienvenida!="2") {
     }
 }
 
-// --- secciones de compras---
-
-const secciones =["Fiambres", "Lacteos","Vinos","Carnes","Limpieza"]
-
-for (let index = 0; index < secciones.length; index++) {
-    const element = secciones[index];
-    console.log(element)
-}
-
 //---Busqueda---
 
-const busqueda = productos.find((busca)=>busca.nombre ==="fideos")
-console.log(busqueda)
+//const busqueda = productos.find((busca)=>busca.nombre ==="fideos")
+//console.log(busqueda)
 
 //---Filtrado---
 
 const filtrado = productos.filter((element)=> element.precio <=600)
 
 let preciosBajos= filtrado.map((productos)=> productos.nombre +" "+ "$ " + productos.precio)
+
 console.log("Estos son nuestros productos de menos de $600 "+preciosBajos)
 

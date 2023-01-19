@@ -1,14 +1,17 @@
-.formasDeComprar{
-    @include flex-row-center;
-    align-items: center;
-    background-color: transparent;
-    background-image: linear-gradient(140deg, #01629F 0%, #7898C7 100%);
-    background-image: url(/img/fondoo.jpg);
+#imagenFond{
+background-image:url(/img/fondoo.jpg);
     opacity: 0.6;
     min-height: 40rem;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+
+.formasDeComprar{
+    @include flex-row-center;
+    align-items: center;
+    
     font-size: 1.8rem;
     text-align: center;
     padding: .6rem;
@@ -21,7 +24,17 @@
     }
 }
 
+
 .ofertasSemana{
     @include flex-colum-center;
-    background-color: cadetblue;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(255, 179, 0, 0.932), rgba(225, 255, 0, 0.794));
+    width: 30rem;
+    height: 10rem;
+    margin: 0 auto;
+    border-radius: 6rem;
+    box-shadow: 0 .5rem 1rem -.5rem;
+    h2,p{
+        font-size: 1.5rem;
+    }
 }
