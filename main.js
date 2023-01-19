@@ -6,6 +6,20 @@ for (let index = 0; index < secciones.length; index++) {
     const element = secciones[index];
     console.log(element)
 }
+//---Contructor---
+class Tienda{
+    constructor (producto,marca, precio){
+        this.producto=producto;
+        this.marca=marca;
+        this.precio=precio;
+    }
+}
+
+//---fiambres---
+const tienda=[]
+tienda.push(new Tienda("salamin","milan", 800))
+tienda.push(new Tienda("queso","fontina", 950))
+tienda.push(new Tienda ("mortadela", "dela", 680))
 
 const productos = [
     {nombre: "fideos" ,precio:500},
