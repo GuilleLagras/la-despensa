@@ -99,7 +99,7 @@ nav .listaGeneral {
 }
 
 #imagenFond {
-  background-image: url(/img/fondoo.webp);
+  background-image: url(img/fondoo.webp);
   opacity: 0.6;
   min-height: 40rem;
   background-size: cover;
